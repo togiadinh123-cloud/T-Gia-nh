@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CustomImage as Image } from "@/components/CustomImage";
 import { useState } from "react";
 import { Button } from "@/components/Button";
 import { playFeedbackTone, speakEnglish } from "@/lib/clientAudio";

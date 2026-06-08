@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { CustomImage as Image } from "@/components/CustomImage";
 import Link from "next/link";
 import { AppFooter } from "@/components/AppFooter";
 import { buttonClassName } from "@/components/Button";

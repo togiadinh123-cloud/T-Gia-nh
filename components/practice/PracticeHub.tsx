@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CustomImage as Image } from "@/components/CustomImage";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/Button";

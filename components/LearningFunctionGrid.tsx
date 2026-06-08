@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { CustomImage as Image } from "@/components/CustomImage";
 import Link from "next/link";
 
 type LearningFunctionGridProps = {
