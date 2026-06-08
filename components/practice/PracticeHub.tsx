@@ -11,10 +11,11 @@ import { MeaningMatchGame } from "./MeaningMatchGame";
 import { SentencePatternTrainer } from "./SentencePatternTrainer";
 import { VocabTrainer } from "./VocabTrainer";
 
+import { useSearchParams } from "next/navigation";
+
 export type PracticeMode = "vocab" | "image" | "match" | "listening" | "patterns";
 
 type PracticeHubProps = {
-  initialMode?: PracticeMode;
   items: VocabularyItem[];
   patterns: SentencePattern[];
 };
@@ -75,11 +76,14 @@ function getNextMode(mode: PracticeMode): PracticeMode {
 }
 
 export function PracticeHub({
-  initialMode = "vocab",
   items,
   patterns,
 }: PracticeHubProps) {
-  const [mode, setMode] = useState<PracticeMode>(initialMode);
+  const searchParams = useSearchParams();
+  const searchMode = searchParams?.get("mode") as PracticeMode | null;
+  const initialMode = modes.some(m => m.id === searchMode) ? searchMode : "vocab";
+
+  const [mode, setMode] = useState<PracticeMode>(initialMode as PracticeMode);
   const [sessionXp, setSessionXp] = useState(0);
   const activeMode = modes.find((item) => item.id === mode) ?? modes[0];
 

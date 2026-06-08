@@ -1,4 +1,5 @@
-import { PracticeHub, type PracticeMode } from "@/components/practice/PracticeHub";
+import { Suspense } from "react";
+import { PracticeHub } from "@/components/practice/PracticeHub";
 import { mockSentencePatterns } from "@/data/mockSentencePatterns";
 import { mockVocabulary } from "@/data/mockVocabulary";
 
@@ -7,31 +8,13 @@ export const metadata = {
   description: "Luyện từ vựng, đoán hình, nối từ, nghe và mẫu câu B1.",
 };
 
-const validModes: PracticeMode[] = [
-  "vocab",
-  "image",
-  "match",
-  "listening",
-  "patterns",
-];
-
-type PracticePageProps = {
-  searchParams?: Promise<{
-    mode?: string;
-  }>;
-};
-
-export default async function PracticePage({ searchParams }: PracticePageProps) {
-  const mode = (await searchParams)?.mode;
-  const initialMode = validModes.includes(mode as PracticeMode)
-    ? (mode as PracticeMode)
-    : "vocab";
-
+export default function PracticePage() {
   return (
-    <PracticeHub
-      initialMode={initialMode}
-      items={mockVocabulary}
-      patterns={mockSentencePatterns}
-    />
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center text-[#5c747b]">Đang tải...</div>}>
+      <PracticeHub
+        items={mockVocabulary}
+        patterns={mockSentencePatterns}
+      />
+    </Suspense>
   );
 }
