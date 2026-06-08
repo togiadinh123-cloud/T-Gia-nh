@@ -7,7 +7,6 @@ import { ProgressMetricCard } from "@/components/ProgressMetricCard";
 import { mockVocabulary } from "@/data/mockVocabulary";
 import { loadUserProgress } from "@/lib/progress/userProgress";
 
-export const dynamic = "force-dynamic";
 
 export default async function LearnPage() {
   const { isMockMode, progress } = await loadUserProgress();
