@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">Water</title>
+  <rect width="240" height="240" rx="40" fill="#effaff"/>
+  <path d="M120 38c29 39 56 75 56 112 0 35-25 60-56 60s-56-25-56-60c0-37 27-73 56-112Z" fill="#70c7e8"/>
+  <path d="M91 151c0 22 15 34 34 34" fill="none" stroke="#dff7ff" stroke-width="12" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">Sun</title>
+  <rect width="240" height="240" rx="40" fill="#eaf8ff"/>
+  <g stroke="#ffd166" stroke-width="12" stroke-linecap="round">
+    <path d="M120 36v24M120 180v24M36 120h24M180 120h24M61 61l17 17M162 162l17 17M179 61l-17 17M78 162l-17 17"/>
+  </g>
+  <circle cx="120" cy="120" r="54" fill="#ffd166"/>
+  <path d="M90 127c12 15 40 15 52 0" fill="none" stroke="#12333f" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="100" cy="104" r="6" fill="#12333f"/>
+  <circle cx="140" cy="104" r="6" fill="#12333f"/>
+</svg>

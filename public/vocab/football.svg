@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">Football</title>
+  <rect width="240" height="240" rx="40" fill="#eefaf0"/>
+  <circle cx="120" cy="120" r="72" fill="#fff" stroke="#12333f" stroke-width="8"/>
+  <path d="m120 82 34 25-13 40h-42l-13-40 34-25Z" fill="#12333f"/>
+  <path d="M86 107 61 94M154 107l25-13M99 147l-17 28M141 147l17 28M120 82V51" stroke="#12333f" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">Book</title>
+  <rect width="240" height="240" rx="40" fill="#eaf8f6"/>
+  <path d="M48 60c29-13 56-10 78 7v124c-23-17-48-20-78-7V60Z" fill="#0e9f91"/>
+  <path d="M126 67c22-17 49-20 78-7v124c-30-13-55-10-78 7V67Z" fill="#ffd166"/>
+  <path d="M126 67v124" stroke="#12333f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M70 93h56M70 122h44M151 92h34M151 122h44" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+</svg>

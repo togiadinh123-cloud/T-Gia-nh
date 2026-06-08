@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">School</title>
+  <rect width="240" height="240" rx="40" fill="#edf7ff"/>
+  <path d="M47 105h166v89H47z" fill="#ffd166"/>
+  <path d="M120 45 39 105h162L120 45Z" fill="#ff6f61"/>
+  <path d="M95 194v-52h50v52" fill="#12333f"/>
+  <path d="M68 126h24M152 126h24M68 152h24M152 152h24" stroke="#12333f" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="120" cy="88" r="13" fill="#fff"/>
+</svg>
