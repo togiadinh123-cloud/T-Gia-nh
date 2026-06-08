@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
 import { AuthForm } from "@/components/AuthForm";
 
+import { Suspense } from "react";
+
 export const metadata: Metadata = {
   title: "Đăng ký | Định English",
 };
 
-type SignupPageProps = {
-  searchParams: Promise<{
-    redirectTo?: string;
-  }>;
-};
-
-export default async function SignupPage({ searchParams }: SignupPageProps) {
-  const { redirectTo } = await searchParams;
-
-  return <AuthForm mode="signup" redirectTo={redirectTo || "/learn"} />;
+export default function SignupPage() {
+  return (
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center text-[#5c747b]">Đang tải...</div>}>
+      <AuthForm mode="signup" />
+    </Suspense>
+  );
 }

@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { signInWithEmail, signUpWithEmail } from "@/lib/supabase/auth";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { ensureUserProfile } from "@/lib/supabase/profiles";
@@ -13,7 +13,6 @@ type AuthMode = "login" | "signup";
 
 type AuthFormProps = {
   mode: AuthMode;
-  redirectTo?: string;
 };
 
 const copy = {
@@ -35,8 +34,10 @@ const copy = {
   },
 };
 
-export function AuthForm({ mode, redirectTo = "/learn" }: AuthFormProps) {
+export function AuthForm({ mode }: AuthFormProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectTo = searchParams?.get("redirectTo") || "/learn";
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
